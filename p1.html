@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyper Pages</title>
+    <style>
+        body {
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-top: 50px;
+        }
+        .container1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container2 {
+            margin-top: 50px;
+            border: 1px solid;
+            border-radius: 10px;
+            padding: 25px;
+        }
+    </style>
+    <script>
+        function main() {
+            let r = parseFloat(document.getElementById('num1').value);
+            let area = 3.14 * r * r;
+            document.getElementById('result').innerText = area;
+        }
+    </script>
+</head>
+<body>
+    <div class="container1">
+        <a href="index.html"><h2>Hyper Pages</h2></a>
+        <div>Area of a circle</div>
+    </div>
+    <hr>
+    <p>This page takes the radius of a circle and prints its area.</p>
+    <div class="container2">
+        <label for="num1">Enter the radius:</label>
+        <input id="num1"><br><br>
+        <button onclick="main()">Calculate Area</button>
+        <!-- <p id="result"></p> -->
+        <p><span>Area: </span><span id="result"></span></p>
+    </div>
+</body>
+</html>
