@@ -25,8 +25,11 @@
     <script>
         function main() {
             let r = parseFloat(document.getElementById('num1').value);
-            let area = 3.14 * r * r;
-            document.getElementById('result').innerText = area;
+            if (r >= 0) {
+                let area = 3.14 * r * r;
+                document.getElementById('result').innerText = area.toFixed(2);
+            }
+            else document.getElementById('result').innerText = 0;
         }
     </script>
 </head>
@@ -41,7 +44,6 @@
         <label for="num1">Enter the radius:</label>
         <input id="num1"><br><br>
         <button onclick="main()">Calculate Area</button>
-        <!-- <p id="result"></p> -->
         <p><span>Area: </span><span id="result"></span></p>
     </div>
 </body>
